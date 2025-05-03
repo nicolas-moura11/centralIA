@@ -8,7 +8,7 @@ Antes de começar, verifique se você tem os seguintes itens instalados:
 
 - [Node.js]
 - [Git]
-- [TailWind] (https://tailwindcss.com/docs/installation/using-vite)
+- [TailWind] (https://tailwindcss.com/docs/installation/using-vite) npm install tailwindcss @tailwindcss/vite
 
 ## 1. Clonando o repositório
 
