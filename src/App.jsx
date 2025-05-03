@@ -1,16 +1,16 @@
-
 import React from "react";
 import CommunityList from "./components/communityList";
 import Header from "./components/Header";
+import { UserProvider } from "./components/UserContext"; // Certifique-se de importar corretamente o UserProvider
 
 function App() {
   return (
-    
-    <div className="">
-      <Header />
-      <h1 className="text-3xl font-bold mb-6">Comunidades</h1>
-      <CommunityList />
-    </div>
+    <UserProvider>
+      <div className="">
+        <Header />
+        <CommunityList />
+      </div>
+    </UserProvider>
   );
 }
 
