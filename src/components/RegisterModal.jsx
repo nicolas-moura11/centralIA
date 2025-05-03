@@ -99,7 +99,7 @@ function RegisterModal({ isOpen, onClose }) {
 
   return (
     <div
-      className="fixed inset-0 flex items-center justify-center z-50 bg-[rgba(0,0,0,0.2)]"
+      className="fixed inset-0 flex items-center justify-center z-50 bg-[rgba(0,0,0,0.1)] backdrop-blur-sm"
       aria-labelledby="register-modal-title"
       role="dialog"
       aria-modal="true"
