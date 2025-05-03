@@ -188,22 +188,6 @@ function RegisterModal({ isOpen, onClose }) {
             />
           </div>
 
-          <div className="mb-6">
-            <label
-              htmlFor="file"
-              className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
-            >
-              Foto de perfil (opcional)
-            </label>
-            <input
-              type="file"
-              id="file"
-              name="file"
-              accept="image/*"
-              onChange={handleChange}
-              className="w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100"
-            />
-          </div>
 
           {error && (
             <div className="text-red-500 text-sm mb-4 text-center">{error}</div>
