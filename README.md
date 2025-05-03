@@ -8,6 +8,7 @@ Antes de começar, verifique se você tem os seguintes itens instalados:
 
 - [Node.js]
 - [Git]
+- [TailWind]
 
 ## 1. Clonando o repositório
 
