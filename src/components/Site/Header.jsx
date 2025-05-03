@@ -1,20 +1,20 @@
 import React, { useState } from "react";
 import { AiFillMacCommand } from "react-icons/ai";
-import LoginButton from "./LoginButton.jsx";
-import LoginModal from "./LoginModal.jsx";
-import RegisterButton from "./RegisterButton.jsx"; 
-import RegisterModal from "./RegisterModal.jsx";   
-import { useUser } from "./UserContext";
+import LoginButton from "../Buttons/LoginButton.jsx";
+import LoginModal from "../Modals/LoginModal.jsx";
+import RegisterButton from "../Buttons/RegisterButton.jsx";
+import RegisterModal from "../Modals/RegisterModal.jsx";
+import { useUser } from "../Auth/UserContext.jsx";
 import { getAuth, signOut } from "firebase/auth";
-import { useNavigate } from "react-router-dom";  // Importando useNavigate
+import { useNavigate, Link } from "react-router-dom"; 
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
-  const [showModal, setShowModal] = useState(false);  // Modal de Login
-  const [showRegisterModal, setShowRegisterModal] = useState(false);  // Modal de Registro
+  const [showModal, setShowModal] = useState(false);
+  const [showRegisterModal, setShowRegisterModal] = useState(false);
   const { user, setUser } = useUser();
   const auth = getAuth();
-  const navigate = useNavigate();  // Usando useNavigate para navegação
+  const navigate = useNavigate();
 
   const toggleModal = () => setShowModal(!showModal);
   const toggleRegisterModal = () => setShowRegisterModal(!showRegisterModal);
@@ -28,9 +28,8 @@ function Header() {
     }
   };
 
-  // Função para redirecionar para a página de criação de comunidade
   const handleCreateCommunity = () => {
-    navigate("/create-community");  // Redirecionando para /create-community
+    navigate("/create-community");
   };
 
   return (
@@ -57,7 +56,11 @@ function Header() {
 
         <div className={`${isOpen ? "block" : "hidden"} w-full md:block md:w-auto`}>
           <ul className="flex flex-col font-medium mt-4 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-transparent dark:bg-gray-800 md:dark:bg-transparent dark:border-gray-700">
-            {/* Aqui você pode adicionar mais itens no menu */}
+            <li>
+              <Link to="/home" className="text-white">Home</Link>  
+            </li>
+            <li><a href="#about" className="text-white">Sobre</a></li>
+            <li><a href="#contact" className="text-white">Contato</a></li>
           </ul>
         </div>
 
@@ -69,9 +72,8 @@ function Header() {
             </>
           ) : (
             <>
-              {/* Botão de criar comunidade, exibido apenas se o usuário estiver logado */}
               <button
-                onClick={handleCreateCommunity}  // Usando handleCreateCommunity para navegação
+                onClick={handleCreateCommunity}
                 className="text-white bg-green-600 hover:bg-green-700 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-green-500 dark:hover:bg-green-600 dark:focus:ring-green-700"
               >
                 Criar Comunidade
@@ -87,7 +89,6 @@ function Header() {
         </div>
       </div>
 
-      {/* Modais de Login e Registro */}
       {showModal && <LoginModal isOpen={showModal} onClose={toggleModal} />}
       {showRegisterModal && <RegisterModal isOpen={showRegisterModal} onClose={toggleRegisterModal} />}
     </nav>

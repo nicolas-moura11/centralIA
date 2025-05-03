@@ -2,34 +2,37 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import Home from "./pages/Home";
 import CreateCommunityPage from "./pages/CreateCommunityPage";
-import Header from "./components/Header";
-import { UserProvider, useUser } from "./components/UserContext";
-import CommunityList from "./components/communityList";
+import Header from "./components/Site/Header";
+import { UserProvider, useUser } from "./components/Auth/UserContext";
+import CommunityPage from "./pages/CommunityPage";
+import { Toaster } from "react-hot-toast";
+import Footer from "./components/Site/Footer";
+
+
 
 function App() {
   return (
     <UserProvider>
       <Router>
-        <div>
+        <div className="flex flex-col min-h-screen">
           <Header />
-          <CommunityList />
-          <Routes>
-            <Route path="/" element={<Navigate to="/home" />} />
-            <Route path="/home" element={<Home />} />
-            
-            <Route
-              path="/create-community"
-              element={<ProtectedRoute />}
-            />
-          </Routes>
-          
+          <Toaster position="bottom-right" />
+          <main className="flex-grow">
+            <Routes>
+              <Route path="/" element={<Navigate to="/home" />} />
+              <Route path="/home" element={<Home />} />
+              <Route path="/create-community" element={<ProtectedRoute />} />
+              <Route path="/community/:communityId" element={<CommunityPage />} />
+            </Routes>
+          </main>
+          <Footer />
         </div>
       </Router>
     </UserProvider>
   );
 }
 
-// Componente para proteger a rota
+
 function ProtectedRoute() {
   const { user } = useUser(); 
 

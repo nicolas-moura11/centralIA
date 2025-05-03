@@ -1,8 +1,12 @@
 import React from "react";
+import CommunityList from "../components/Community/communityList";
 
-
-const Home = () => {
-  
-};
+function Home() {
+  return (
+    <div>
+      <CommunityList />
+    </div>
+  );
+}
 
 export default Home;

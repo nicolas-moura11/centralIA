@@ -1,4 +1,3 @@
-// src/components/RegisterModal.jsx
 import React, { useState } from "react";
 import {
   getAuth,
