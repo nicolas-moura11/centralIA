@@ -9,6 +9,7 @@ Antes de começar, verifique se você tem os seguintes itens instalados:
 - [Node.js]
 - [Git]
 - [TailWind]
+npm install -D tailwindcss postcss autoprefixer
 
 ## 1. Clonando o repositório
 
