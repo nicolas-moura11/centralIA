@@ -8,8 +8,7 @@ Antes de começar, verifique se você tem os seguintes itens instalados:
 
 - [Node.js]
 - [Git]
-- [TailWind]
-npm install -D tailwindcss postcss autoprefixer
+- [TailWind] (https://tailwindcss.com/docs/installation/using-vite)
 
 ## 1. Clonando o repositório
 
