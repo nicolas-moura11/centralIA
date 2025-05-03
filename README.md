@@ -32,3 +32,15 @@ VITE_FIREBASE_MEASUREMENT_ID=seu-measurement-id
 
 ## 3. Rode o projeto localmente com:
 npm run dev
+
+![Captura de tela 2025-05-03 065203](https://github.com/user-attachments/assets/1df0e054-ff36-432a-ac01-6b6f3c11228e)
+![Captura de tela 2025-05-03 065218](https://github.com/user-attachments/assets/63ed6373-816e-4c1c-b2d2-fb331799b567)
+![Captura de tela 2025-05-03 065237](https://github.com/user-attachments/assets/33bfa73a-9074-46df-ac13-15cd3253179e)
+![Captura de tela 2025-05-03 065305](https://github.com/user-attachments/assets/46ca1714-7ec7-4b77-a847-a905ce107487)
+![Captura de tela 2025-05-03 065322](https://github.com/user-attachments/assets/508f19d5-f029-49d0-9f98-1d6484f348e7)
+
+
+
+
+
+
