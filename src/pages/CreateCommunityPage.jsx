@@ -1,5 +1,5 @@
 import React from "react";
-import CreateCommunityForm from "../components/CreateCommunityForm"; 
+import CreateCommunityForm from "../components/Forms/CreateCommunityForm"; 
 
 const CreateCommunityPage = () => {
   return (

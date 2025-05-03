@@ -1,6 +1,5 @@
-// src/components/LoginModal.jsx
 import React, { useState } from "react";
-import { loginUser } from "../services/authService";
+import { loginUser } from "../../services/authService";
 
 function LoginModal({ isOpen, onClose }) {
   const [email, setEmail] = useState("");
