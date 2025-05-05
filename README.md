@@ -21,7 +21,7 @@ npm install
 
 ## 2. Acessendo o firebase
 
-Crie um arquivo.env para passar suas credenciais do firebase:
+Crie um arquivo.env para passar suas credenciais do firebase e a collection "Community" e "user":
 
 VITE_FIREBASE_API_KEY=suachaveapikey
 VITE_FIREBASE_AUTH_DOMAIN=seuprojeto.firebaseapp.com
